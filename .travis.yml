@@ -4,4 +4,13 @@ node_js:
   - '5'
 script: grunt jasmine
 before_install:
-  - npm install -g grunt-cli
+  - npm install -g grunt-cli bower
+  - bower install
+env:
+ - CXX=g++-4.8
+addons:
+ apt:
+  sources:
+   - ubuntu-toolchain-r-test
+  packages:
+   - g++-4.8
